@@ -1,0 +1,61 @@
+body {
+  font-family: monospace;
+}
+h1 {
+  text-align: center;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 2px solid black;
+  width: 20%;
+  margin: auto;
+  height: 30rem;
+}
+input {
+  margin: 0 2rem;
+}
+label {
+  margin: 0.5rem 0 0.5rem 0;
+  font-size: 15px;
+  font-weight: bolder;
+  text-align: center;
+}
+#submit {
+  margin: 2rem 1rem;
+  background-color: rgb(0, 166, 255);
+  color: #ffffff;
+  text-align: center;
+  padding: 0.5rem;
+}
+@keyframes ripple {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#submit:after {
+  animation: ripple 0.8s;
+}
+.touched:invalid {
+  box-shadow: 0 0 4px 1px red;
+}
+input:valid {
+  box-shadow: 0 0 4px 1px green;
+}
+input:focus {
+  box-shadow: none;
+  outline: none;
+
+}
+#info {
+  border: 2px solid black;
+  width: 40%;
+  padding: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: large;
+}

@@ -1,0 +1,29 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formStyle.css">
+</head>
+<body>
+    <form novalidate id="container">
+        <h1>It's Just A Norm Form </h1>
+    <label for="email">Enter Email:</label>
+    <input name="email" id="email" type="text" required pattern="(.+)@[a-z]+(\.(com|co|uk|org))+">
+    <label for="country">Enter Country:</label>
+    <input name="country" id="country" type="text" required pattern="([A-Z][a-z]+\s?)+">
+    <label for="zip">Enter Zip Code:</label>
+    <input name="zip" id="zip" type="text" required pattern="[A-Z\s]{5,8}">
+    <label for="pass">Enter Password:</label>
+    <input name="pass" id="pass" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+    <label for="secondPass">Confirm Password:</label>
+    <input name="secondPass" id="secondPass" type="password" required>
+    <button id="submit" type="button">Sign Up</button>
+</form>
+<p id="info"></p>
+</body>
+<script src="validation.js"></script>
+</html>
+
